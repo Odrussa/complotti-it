@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complotti.it</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="site-name">
+            <a href="#" onclick="ricaricaPagina()">Complotti.it</a> <!-- Link cliccabile -->
+            <span class="director-name">Direttore: Antonino Tinervia</span>
+        </div>
+        <div class="search-section">
+            <input type="text" id="search-bar" placeholder="Cerca una teoria...">
+            <div class="social-icons">
+                <!-- Icona Instagram come immagine -->
+                <a href="https://www.instagram.com/antonino__tinervia/" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram">
+                </a>
+                <!-- Icona TikTok come immagine -->
+                <a href="https://www.tiktok.com/@odrussa2?lang=it-IT" target="_blank">
+                    <img src="tiktok-icon.png" alt="TikTok"> 
+                </a>
+                <!-- Icona GitHub come immagine -->
+                <a href="https://github.com/Odrussa" target="_blank">
+                    <img src="github-icon.png" alt="GitHub"> 
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul class="menu" id="menu">
+            <li><a href="#" onclick="chiudiMenu()">Home</a></li> <!-- Link per tornare in cima -->
+            <li><a href="#chi-siamo" onclick="chiudiMenu()">Chi siamo</a></li>
+            <li><a href="#rettiliani" onclick="chiudiMenu()">Rettiliani</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Scopri il complotto del giorno! 🛸</h2>
+        <button onclick="generaComplotto()">Scopri</button>
+        <p id="risultato"></p>
+    </main>
+
+    
+     <!-- Sezione "Chi siamo" -->
+     <section id="chi-siamo" class="featured">
+        <h3>Chi siamo</h3>
+        <div class="complotto" onclick="apriModale('krosto33.jpg', 'COME IN C I E L O COSI IN TERRA', 'meditate, gente, meditate!')">>
+            <img src="krosto33.jpg" alt="Il nostro team">
+            <div class="complotto-info">
+                <h4>Il nostro team</h4>
+                <p>Benvenuti su Complotti.it! Siamo la brigata stellare, gruppo di appassionati investigatori di teorie del complotto, impegnati a scoprire e condividere le verità nascoste che i poteri forti non vogliono che tu sappia. Il nostro direttore, Antonino Tinervia, ispirato dal profeta Salvatourus Coppola 
+                    guida un team di esperti in vari campi, dalla scienza alla storia, per portarti le analisi più approfondite e sconvolgenti.</p>
+            </div>
+        </div>
+    </section>
+
+  <!-- Sezione "In primo piano" -->
+<section class="featured">
+    <h3>In primo piano</h3>
+    <div class="complotto" onclick="apriModale('papa.jpg', 'Papa Bergoglio: chi è veramente ?', 'LUI NON È SOLO UN rettiliano, NON È SOLO UN IBRIDO ANUNNAKI, È DIRETTAMENTE SATANA IN PERSONA 👹🔥 MA VOI DORMITE 🛌💤' + 
+    'GESUITA EBRAICO FINOCCHIO, ANTICRISTO ARGENTINO' + 
+    ' Per fortuna che è già morto. MERDOGLIO  🐉VATICANCRO 🐍😈', 'registrazione.mp3')">
+        <img src="papa.jpg" alt="Papa">
+        <div class="complotto-info">
+            <h4>Papa Bergoglio: chi è veramente ?</h4>
+            <p>Scopri la teoria che sta sconvolgendo il mondo: la vera identità di Papa Francesco</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Sezione "Rettiliani" -->
+    <section id="rettiliani" class="featured">
+        <h3>Rettiliani</h3>
+        <div class="complotto" onclick="apriModale('mostro-firenze.jpg', 'Mostro di Firenze e rettiliani', 'M O S T R O🐍😈  DI FIRENZE ANNI 80 SIAMO SICURI CHE ERA U M A N O ????😮 PER ME ERA UN UMANOIDE RETTILOIDE🐍IBRIDO DEMONE😈MAGARI CONTROLLATO MENTALMENTE (MK ULTRA)CHE FACEVA A PEZZI CHIRURGICAMENTE (RITI DEMONIACI😈BASSE VIBRAZIONI)LE VITTIME DONNE E UOMINI!! ERANO  R I T I  ESOTERICI DEMONIACI')">
+            <img src="mostro-firenze.jpg" alt="Rettiliano 1">
+            <div class="complotto-info">
+                <h4>Mostro di Firenze e rettiliani</h4>
+                <p>Scopri come i rettiliani si sono infiltrati nei governi e nelle istituzioni.</p>
+            </div>
+        </div>
+        <div class="complotto" onclick="apriModale('porta-stellare.jpg', 'Laboratorio segreto', 'S  T  A  R  G  A  T  E    IN    L A B O R A T O R I O   . 🐍🦖🦎🐲🐲🐍🐲🐍🐲🦎🦖🐲🐍🦎🦖🐲🐍🐲 I   D R A C O R E T T I L I A N I 🐍🐲  HANNO  QUESTE  PORTE  STELLARI  DA  MILLENNI !!!!')">
+            <img src="porta-stellare.jpg" alt="Rettiliano 2">
+            <div class="complotto-info">
+                <h4>Laboratorio segreto</h4>
+                <p>Analizziamo le prove di un segretissimo laboratorio.</p>
+            </div>
+        </div>
+        <div class="complotto" onclick="apriModale('enea.jpg', 'Enea, film 2023', 'B E L   F I L M   DI  CASTELLITTO .....STI🦎  RETTILIANI 🐍 FANNO  FILM MOLTO  COINVOLGENTI  .    E    N    E   A  .')">
+            <img src="enea.jpg" alt="Rettiliano 2">
+            <div class="complotto-info">
+                <h4>Enea, film 2023</h4>
+                <p><A>Analisi del film Enea diretto da Pietro Castellitto</A>.</p>
+            </div>
+        </div>
+
+        <div class="complotto" onclick="apriModale('meloni.jpg', '😂😂😂😂 E   PIÙ   ALTO  L 🎄 ALBERO  DI 🎄 NATALE CHE  LEI LA  <<DONNA>>  CRISTIANA  PATRIOTA 🤣🤣🤣😂😂😂😂😂😂'+
+        'DAI ....QUALCOSA  DI  BUONO  L HA  FATTO  HA  TOLTO  LE  MULTE  NO  VAXX 😅😅😅😅 🍈🍈', '')">
+            <img src="meloni.jpg" alt="Rettiliano 2">
+            <div class="complotto-info">
+                <h4>Giorgia Meloni</h4>
+                <p><A>Apolitica rettiliana italiana</A>.</p>
+            </div>
+        </div>
+
+
+        <div class="complotto" onclick="apriModale('luna.jpg', '🎥🎬    C  I  A  K    🎬  S I   G I R A   🎬🎥🎬🎥🎬  L O   S B A R C O   😅😅😅😅😅  SULLA ' +  
+        ' L U N A   .', '')">
+            <img src="luna.jpg" alt="Rettiliano 2">
+            <div class="complotto-info">
+                <h4>La verità sullo sbarco sulla luna </h4>
+                <p><A>Analisi del film diretto diretto da Stanley Kubrick nel 1970</A>.</p>
+            </div>
+        </div>
+
+        <div class="complotto" onclick="apriModale('draghi.jpg', 'MARIO DRAGONE', 'Servo dei Rothschild, sionista e pedofilo. VERGOGNA ITALIANA ')">
+            <img src="draghi.jpg" alt="Rettiliano 2">
+            <div class="complotto-info">
+                <h4>Mario Draghi, banchiere italiano </h4>
+                <p><A>Un nome, una garanzia</A>.</p>
+            </div>
+        </div>
+
+        <div class="complotto" onclick="apriModale('fedez.png', 'FESTIVAL DEGLI ORRORI 😈', 'Ex marito di CHIARA FERRAGNI, DOVE SONO GLI OCCHI???')">
+            <img src="fedez.png" alt="Rettiliano 2">
+            <div class="complotto-info">
+                <h4>Festival di Sanremo </h4>
+                <p><A>Immagine esclusiva in diretta TV </A>.</p>
+            </div>
+        </div>
+
+    </section>
+
+   
+    <!-- Finestra modale -->
+    <div id="modale" class="modale">
+        <div class="modale-contenuto">
+            <span class="chiudi" onclick="chiudiModale()">&times;</span>
+            <img id="modale-immagine" src="" alt="">
+            <h2 id="modale-titolo"></h2>
+            <p id="modale-descrizione"></p>
+            
+            <!-- Aggiungi qui l'elemento audio -->
+            <div id="modale-audio-section" class="audio-section" style="display: none;">
+                <h5>Ascolta le parole del massimo esponente del cristianesimo </h5>
+                <audio id="modale-audio" controls>
+                    <source src="" type="audio/mpeg">
+                    Il tuo browser non supporta l'elemento audio.
+                </audio>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
