@@ -31,16 +31,49 @@ header {
     color: #ccc; /* Colore più tenue per distinguerlo */
 }
 
-.search-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-right: 20px;
+
+/* Stile di base per la barra di ricerca */
+.search-section input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px; /* Larghezza massima su desktop */
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.search-section input {
-    padding: 5px;
-    margin-bottom: 10px;
+/* Ottimizzazione per dispositivi mobili */
+@media (max-width: 768px) {
+    .search-section input {
+        max-width: 100%; /* Occupa tutta la larghezza disponibile */
+        font-size: 14px; /* Riduci le dimensioni del font */
+        padding: 8px; /* Riduci il padding */
+    }
+
+    .search-section button {
+        padding: 8px 12px; /* Riduci il padding del pulsante */
+        font-size: 14px; /* Riduci le dimensioni del font */
+    }
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Spazio tra input e pulsante */
+}
+
+@media (max-width: 768px) {
+    .search-section {
+        flex-direction: column; /* Disposizione verticale su mobile */
+        gap: 5px; /* Riduci lo spazio tra input e pulsante */
+    }
+}
+
+.search-section button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .social-icons {
@@ -236,3 +269,24 @@ button:hover {
 .site-name a:hover {
     color: #ffcc00; /* Cambia colore al passaggio del mouse (opzionale) */
 }
+
+
+header {
+    position: fixed; /* Fissa l'header in cima */
+    top: 0;          /* Allinea l'header al bordo superiore */
+    left: 0;         /* Allinea l'header al bordo sinistro */
+    width: 100%;     /* Occupa tutta la larghezza della pagina */
+    background-color: #333; /* Colore di sfondo dell'header */
+    z-index: 1000;   /* Assicura che l'header sia sopra altri elementi */
+    padding: 10px 20px; /* Aggiungi un po' di padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombra per un effetto di profondità */
+}
+
+main {
+    margin-top: 80px; /* Regola questo valore in base all'altezza dell'header */
+}
+
+section {
+    margin-top: 80px; /* Regola questo valore in base all'altezza dell'header */
+}
+
